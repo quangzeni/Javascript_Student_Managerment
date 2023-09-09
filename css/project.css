@@ -1,0 +1,51 @@
+#headerWeb {
+    height: 100px;
+}
+img{
+    width: 200px;
+}
+*{
+    color: #AC3230;
+}
+#main{
+    height: 100%;
+}
+footer {
+    text-align: center;
+}
+#mainLeft {
+    height: 100%;
+    color: #AC3230 !important;
+}
+#mainHome{
+    height: 700px !important;
+
+}
+#modalSearchSort {
+    display: flex;
+}
+#addNew{
+    margin-bottom: 10px !important;
+}
+#mainHome h3{
+    text-align: left;
+}
+#mainHome p{
+    text-align: left;
+}
+#tittleHome {
+    text-align: center !important;
+}
+.paging{
+    display: flex !important;
+    /* list-style: none;
+    flex-direction: row; */
+}
+h2 {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 32px;
+}
+footer{
+    padding: 20px;
+}

@@ -1,0 +1,12 @@
+#loginPage{
+    width: 500px;
+    height: 600px;
+    padding: 20px;
+    margin: auto;
+}
+form div{
+    margin: 10px;
+}
+button{
+    margin: 10px;
+}

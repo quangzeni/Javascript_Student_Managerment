@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rikkei academy | Quản lý tài khoản</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body>
+    <!-- Làm tiêu đề web - Header -->
+    <header>
+        <div class="container text-center" id="headerWeb">
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://rikkei.edu.vn/wp-content/uploads/2022/04/Logo-Rikkei.png"
+                        alt="Logo Rikkei Academy">
+                </div>
+                <div class="col-6">
+                    <h2>HỆ THỐNG QUẢN LÝ SINH VIÊN RIKKEI</h2>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#logOut"
+                        id="logOutButton">Đăng xuất</button>
+                    <!-- modal Đăng Xuất Ẩn -->
+                    <div id="logOut" class="modal" tabindex="-1" style="display: none;">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Xác nhận đăng xuất tài khoản</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Bạn có chắc chắn muốn đăng xuất?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="confirmOut" type="button" class="btn btn-primary">Có</button>
+                                    <button id="cancelOut" type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Không</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Làm phần thân web - Main -->
+    <main>
+        <div class="container text-center" id="main">
+            <div class="row">
+                <div class="col-md-3 d-none d-md-block" id="mainLeft">
+                    <div>
+                        <div class="d-flex flex-column flex-shrink-0 p-1 text-black bg-white" style="width: 100%;">
+                            <ul class="nav nav-pills flex-column mb-auto">
+                                <li class="nav-item">
+                                    <a href="home_page.html" class="nav-link text-black">
+                                        <svg class="bi me-2" width="16" height="16"></svg>
+                                        Bảng điều khiển
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="course_page.html" class="nav-link text-black">
+                                        <svg class="bi me-2" width="16" height="16"></svg>
+                                        Quản lý khóa học
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="class_page.html" class="nav-link text-black">
+                                        <svg class="bi me-2" width="16" height="16"></svg>
+                                        Quản lý lớp học
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="student_page.html" class="nav-link text-black">
+                                        <svg class="bi me-2" width="16" height="16"></svg>
+                                        Quản lý sinh viên
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="account_page.html" class="nav-link active" aria-current="page">
+                                        <svg class="bi me-2" width="16" height="16"></svg>
+                                        Quản lý tài khoản
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9" id="mainCenter">
+                    <h3>QUẢN LÝ TÀI KHOẢN</h3><br>
+                        <!-- Phần thêm mới và tìm kiếm + sắp xếp -->
+                        <form action="#">
+                            <div class="input-group mb-3">
+                                <button id="btnSearch" class="btn btn-outline-secondary" type="button"
+                                    id="button-addon1">Tìm kiếm</button>
+                                <input type="text" name="accountNameSearch" id="accountNameSearch" class="form-control"
+                                    placeholder="" aria-label="Example text with button addon"
+                                    aria-describedby="button-addon1">
+
+                            </div>
+                            <div  class="input-group mb-3">
+                                <label for="sort"  class="input-group-text" for="inputGroupSelect02">Sắp xếp</label>
+                                <select name="sort" id="sort" onchange="sortAccount()"  class="form-select"
+                                id="inputGroupSelect02">
+                                    <option value="" selected>Lựa chọn</option>
+                                    <option value="accountEmailASC">Email Tài khoản Tăng Dần</option>
+                                    <option value="accountEmailDESC">Email Tài khoản Giảm Dần</option>
+                                    <option value="statusASC">Trạng thái Tài khoản Tăng Dần</option>
+                                    <option value="statusDESC">Trạng thái Tài khoản Giảm Dần</option>
+                                </select>
+                            </div>
+                            
+                        </form>
+                        <!-- Bảng hiển thị thông tin -->
+                        <table id="corseMng" class="table table-striped">
+                            <thead  class="table-group-divider">
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Email</th>
+                                    <th>Mật khẩu</th>
+                                    <th>Họ và tên</th>
+                                    <th>Trạng Thái</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody  class="table-group-divider" id="content">
+                            </tbody>
+                        </table>
+                        <!-- Phân trang -->
+                        <div id="paging">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="javascript:previousPage()"
+                                            id="previous">Prev</a></li>
+                                    <li class="page-item" id="listPages" style="display: flex;"></li>
+                                    <li class="page-item"><a class="page-link" href="javascript:nextPage()"
+                                            id="next">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- modal Lock Ẩn -->
+                        <div id="lockModal" class="modal" tabindex="-1" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Xác nhận khóa tài khoản</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Bạn có chắc muốn khóa tài khoản này?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="confirmLock" type="button" class="btn btn-primary">Khóa</button>
+                                        <button id="cancelLock" type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Hủy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- modal UnLock Ẩn -->
+                        <div id="unlockModal" class="modal" tabindex="-1" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Xác nhận mở khóa tài khoản</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Bạn có chắc muốn mở khóa tài khoản này?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="confirmUnlock" type="button" class="btn btn-primary">Mở</button>
+                                        <button id="cancelUnlock" type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Hủy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Phần Copyright - Footer -->
+    <footer>
+        Copyright Rikkei Academy 20203
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="../js/account_page.js"></script>
+</body>
+
+</html>

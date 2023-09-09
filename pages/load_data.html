@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body>
+    <!-- Làm tiêu đề web - Header -->
+    <header>
+        <div class="container text-center" id="headerWeb">
+            <div class="row">
+                <div class="col-4">
+                    <img src="#" alt="Logo Rikkei Academy">
+                    <p>Để nông dân biết code</p>
+                </div>
+                <div class="col-6">
+                    <h2>HỆ THỐNG QUẢN LÝ SINH VIÊN RIKKEI</h2>
+                </div>
+                <div class="col">
+                    <button>Đăng xuất</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Làm phần thân web - Main -->
+    <main>
+        <div class="container text-center" id="main">
+            <div class="row">
+                <div class="col-3" id="mainLeft">
+                    <div class="col-3">
+                        <div class="d-flex flex-column flex-shrink-0 p-1 text-black bg-white" style="width: 280px;">
+                          <hr>
+                          <ul class="nav nav-pills flex-column mb-auto">
+                            <li class="nav-item">
+                              <a href="home_page.html" class="nav-link active" aria-current="page">
+                                <svg class="bi me-2" width="16" height="16"></svg>
+                                Bảng điều khiển
+                              </a>
+                            </li>
+                            <li>
+                              <a href="course_page.html" class="nav-link text-black">
+                                <svg class="bi me-2" width="16" height="16"></svg>
+                                Quản lý khóa học
+                              </a>
+                            </li>
+                            <li>
+                              <a href="class_page.html" class="nav-link text-black">
+                                <svg class="bi me-2" width="16" height="16"></svg>
+                                Quản lý lớp học
+                              </a>
+                            </li>
+                            <li>
+                              <a href="student_page.html" class="nav-link text-black">
+                                <svg class="bi me-2" width="16" height="16"></svg>
+                                Quản lý sinh viên
+                              </a>
+                            </li>
+                            <li>
+                              <a href="account_page.html" class="nav-link text-black">
+                                <svg class="bi me-2" width="16" height="16"></svg>
+                                Quản lý tài khoản
+                              </a>
+                            </li>
+                          </ul>
+                          <hr>
+                        </div>
+                      </div>
+                    
+                </div>
+                <div class="col-9" id="mainCenter">
+                    <h4>QUẢN LÝ KHÓA HỌC</h3><br>
+                        <button>Thêm mới</button>
+                        <input type="text" name="corseIp" id="corseIp">
+                        <label for="corseIp">Tìm kiếm</label><br>
+                        <table id="corseMng" class="table table-success table-striped-columns">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Mã khóa học</th>
+                                    <th>Tên khóa học </th>
+                                    <th>Thời gian (giờ)</th>
+                                    <th>thạng thái</th>
+                                    <th>Hành động</th>
+                                    </th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <th>RA01</th>
+                                    <th>Khóa học1</th>
+                                    <th>1000</th>
+                                    <th>Hoạt đọng</th>
+                                    <th>
+                                        <button><a href="#">Sửa</a></button>
+                                        <button><a href="#">Xóa</a></button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>RA01</th>
+                                    <th>Khóa học1</th>
+                                    <th>1000</th>
+                                    <th>Hoạt đọng</th>
+                                    <th>
+                                        <button><a href="#">Sửa</a></button>
+                                        <button><a href="#">Xóa</a></button>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Phân trang -->
+                        <div>
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>                                  
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Modal thêm mới khóa học -->
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Phần Copyright - Footer -->
+    <footer>
+        Copyright Rikkei Academy 20203
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="../js/load_data.js"></script>
+</body>
+
+</html>
