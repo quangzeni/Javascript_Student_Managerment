@@ -29,9 +29,9 @@ let renderAccount = (page, arrUser) => {
             <td>${arrUser[i].pass}</td>
             <td>${arrUser[i].name}</td>
             <td>${arrUser[i].status}</td>
-            <td>
-                <button type="button" class="btn btn-secondary" onclick = lockAccount('${arrUser[i].email}')>Khóa</button>
-                <button type="button" class="btn btn-danger" onclick = unlockAccount('${arrUser[i].email}')>Mở khóa</button>
+            <td>                
+                <button type="button" class="btn btn-secondary" onclick = unlockAccount('${arrUser[i].email}')>Mở khóa</button>
+                <button type="button" class="btn btn-danger" onclick = lockAccount('${arrUser[i].email}')>Khóa</button>
             </td>
         </tr>
         `

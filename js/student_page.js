@@ -47,8 +47,8 @@ let renderStudent = (page, arrStudent) => {
             <td>${arrStudent[i].status}</td>
             <td>${arrClass[indexOfClass].className}</td>
             <td>
-                <button type="button" class="btn btn-danger" onclick = editStudent('${arrStudent[i].studentId}')>Sửa</button>
-                <button type="button" class="btn btn-secondary" onclick = deleteStudent('${arrStudent[i].studentId}')>Xóa</button>
+                <button type="button" class="btn btn-secondary" onclick = editStudent('${arrStudent[i].studentId}')>Sửa</button>
+                <button type="button" class="btn btn-danger" onclick = deleteStudent('${arrStudent[i].studentId}')>Xóa</button>
             </td>
         </tr>
         `

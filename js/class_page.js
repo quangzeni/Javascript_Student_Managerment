@@ -47,8 +47,8 @@ renderClass = (page, arrClass) => {
             <td>${arrClass[i].status}</td>
             <td>${arrCourse[indexOfCourse].courseName}</td>
             <td>
-                <button type="button" class="btn btn-danger"  onclick = editClass('${arrClass[i].classId}')>Sửa</button>
-                <button type="button" class="btn btn-secondary" onclick = deleteClass('${arrClass[i].classId}')>Xóa</button>
+                <button type="button" class="btn btn-secondary"  onclick = editClass('${arrClass[i].classId}')>Sửa</button>
+                <button type="button" class="btn btn-danger" onclick = deleteClass('${arrClass[i].classId}')>Xóa</button>
             </td>
         </tr>
         `

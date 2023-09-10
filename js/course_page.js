@@ -30,8 +30,8 @@ renderCourse = (page, arrCourse) => {
             <td>${arrCourse[i].courseTime}</td>
             <td>${arrCourse[i].status}</td>
             <td>
-                <button type="button" class="btn btn-danger" onclick = editCourse('${arrCourse[i].courseId}')>Sửa</button>
-                <button type="button" class="btn btn-secondary" onclick = deleteCourse('${arrCourse[i].courseId}')>Xóa</button>
+                <button type="button" class="btn btn-secondary" onclick = editCourse('${arrCourse[i].courseId}')>Sửa</button>
+                <button type="button" class="btn  btn-danger" onclick = deleteCourse('${arrCourse[i].courseId}')>Xóa</button>
             </td>
         </tr>
         `

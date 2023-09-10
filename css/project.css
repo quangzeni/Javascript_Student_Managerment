@@ -1,51 +1,54 @@
 #headerWeb {
-    height: 100px;
+    height: 100%;
+    box-shadow: 1px 0px 5px rgba(180, 171, 171, 0.5);    
+    padding: 20px;
 }
-img{
+img {
     width: 200px;
 }
-*{
+* {
     color: #AC3230;
 }
-#main{
-    height: 100%;
+#main {
+    height: 800px;
+    box-shadow: 1px 1px 5px rgba(180, 171, 171, 0.5);    
+}
+#mainCenter{
+    box-shadow: 1px 1px 5px rgba(180, 171, 171, 0.5);    
+    padding-top: 40px;
+}
+#addNew{
+    padding: 0px !important;
 }
 footer {
     text-align: center;
 }
 #mainLeft {
-    height: 100%;
-    color: #AC3230 !important;
+    height: 800px;
+    box-shadow: 1px 1px 5px rgba(180, 171, 171, 0.5);
+    padding-top: 60px;
 }
-#mainHome{
-    height: 700px !important;
-
+#mainHome {
+    height: 800px !important;
+    padding-top: 40px;
+    padding-left: 70px;
 }
-#modalSearchSort {
-    display: flex;
-}
-#addNew{
-    margin-bottom: 10px !important;
-}
-#mainHome h3{
+#mainHome h3 {
     text-align: left;
 }
-#mainHome p{
+#mainHome p {
     text-align: left;
 }
 #tittleHome {
     text-align: center !important;
-}
-.paging{
-    display: flex !important;
-    /* list-style: none;
-    flex-direction: row; */
 }
 h2 {
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 32px;
 }
-footer{
+footer {
+    box-shadow: 1px 15px rgba(180, 171, 171, 0.5);
     padding: 20px;
+    background-color: white;
 }
