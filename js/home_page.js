@@ -39,7 +39,6 @@ arrCourse.forEach(course => {
         })
     })
 })
-console.log("total", totalCourse);
 document.getElementById("totalCourse").innerText += totalCourse;
 document.getElementById("totalClass").innerText += totalClass;
 document.getElementById("activeClass").innerText += activeClass;
