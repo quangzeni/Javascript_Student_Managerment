@@ -38,7 +38,8 @@
                                     <p>Bạn có chắc chắn muốn đăng xuất?</p>
                                 </div>
                                 <div class="modal-footer">
-                                    <button id="confirmOut" type="button" class="btn btn-primary">Có</button>
+                                    <button id="confirmOut" type="button" class="btn btn-primary"
+                                        data-bs-dismiss="modal">Có</button>
                                     <button id="cancelOut" type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Không</button>
                                 </div>
@@ -60,30 +61,17 @@
                     <div>
                         <div class="d-flex flex-column flex-shrink-0 p-1 text-black bg-white" style="width: 100%;">
                             <ul class="nav nav-pills flex-column mb-auto">
-                                <li class="nav-item">
-                                    <a href="home_page.html" class="nav-link text-black">
-                                        Bảng điều khiển
-                                    </a>
+                                <li class="nav-item"><a href="home_page.html" class="nav-link text-black">Bảng điều
+                                        khiển</a>
                                 </li>
-                                <li>
-                                    <a href="course_page.html" class="nav-link text-black">
-                                        Quản lý khóa học
-                                    </a>
+                                <li><a href="course_page.html" class="nav-link text-black">Quản lý khóa học</a>
                                 </li>
-                                <li>
-                                    <a href="class_page.html" class="nav-link active" aria-current="page">
-                                        Quản lý lớp học
-                                    </a>
+                                <li><a href="class_page.html" class="nav-link active" aria-current="page">Quản lý lớp
+                                        học</a>
                                 </li>
-                                <li>
-                                    <a href="student_page.html" class="nav-link text-black">
-                                        Quản lý sinh viên
-                                    </a>
+                                <li><a href="student_page.html" class="nav-link text-black">Quản lý sinh viên</a>
                                 </li>
-                                <li>
-                                    <a href="account_page.html" class="nav-link text-black">
-                                        Quản lý tài khoản
-                                    </a>
+                                <li><a href="account_page.html" class="nav-link text-black">Quản lý tài khoản</a>
                                 </li>
                             </ul>
                         </div>
@@ -93,14 +81,11 @@
                     <h3>QUẢN LÝ LỚP HỌC</h3>
                     <!-- Phần thêm mới và tìm kiếm + sắp xếp -->
                     <form action="#" id="modalSearchSort">
-                        <div class="container">
                             <div class="row">
                                 <!-- Button  modal -->
                                 <div id="addNew" class="col-2">
                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
-                                        Thêm mới
-                                    </button>
+                                        data-bs-target="#exampleModal"> Thêm mới </button>
                                 </div>
                                 <!-- Modal -->
                                 <div class="modal fade" id="exampleModal" tabindex="-1"
@@ -119,7 +104,8 @@
                                                         <label for="courseChoose" class="form-label col-sm-4">Khóa
                                                             học</label>
                                                         <div class="col-sm-8">
-                                                            <select name="courseChoose" id="courseChoose">
+                                                            <select class="form-control" name="courseChoose"
+                                                                id="courseChoose">
                                                                 <option value="">Chọn khóa học</option>
                                                                 <option value="courseChoose">Khóa học 1</option>
                                                             </select><br>
@@ -127,36 +113,37 @@
                                                         <label for="classId" class="form-label col-sm-4">Mã lớp học
                                                             (*)</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" name="classId" id="classId"
-                                                                placeholder="Nhập vào mã lớp học"><br>
+                                                            <input class="form-control" type="text" name="classId"
+                                                                id="classId" placeholder="Nhập vào mã lớp học"><br>
                                                         </div>
                                                         <label for="className" class="form-label col-sm-4">Tên lớp học
                                                             (*)</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" name="className" id="className"
-                                                                placeholder="Nhập vào tên lớp học"><br>
+                                                            <input class="form-control" type="text" name="className"
+                                                                id="className" placeholder="Nhập vào tên lớp học"><br>
                                                         </div>
                                                         <label for="lecturer" class="form-label col-sm-4">Giảng viên
                                                             (*)</label>
                                                         <div class="col-sm-8">
-                                                            <input type="text" name="lecturer" id="lecturer"><br>
+                                                            <input class="form-control" type="text" name="lecturer"
+                                                                id="lecturer"><br>
                                                         </div>
                                                         <label for="totalMember" class="form-label col-sm-4">Sĩ số
                                                             (*)</label>
                                                         <div class="col-sm-8">
-                                                            <input type="number" name="totalMember"
+                                                            <input class="form-control" type="number" name="totalMember"
                                                                 id="totalMember"><br>
                                                         </div>
                                                         <label for="discription" class="form-label col-sm-4">Mô
                                                             tả</label>
                                                         <div class="col-sm-8">
-                                                            <textarea id="discription" cols="30"
+                                                            <textarea class="form-control" id="discription" cols="23"
                                                                 rows="2"></textarea><br>
                                                         </div>
                                                         <label for="status" class="form-label col-sm-4">Trạng
                                                             thái</label>
                                                         <div class="col-sm-8">
-                                                            <select name="status" id="status">
+                                                            <select class="form-control" name="status" id="status">
                                                                 <option value="">Lựa chọn</option>
                                                                 <option value="active">Hoạt động</option>
                                                                 <option value="pending">Chờ lớp</option>
@@ -179,7 +166,7 @@
                                 <!-- Tìm kiếm -->
                                 <div class="col-6">
                                     <div class="input-group mb-3">
-                                        <button id="btnSearch" class="btn btn-outline-secondary" type="button"
+                                        <button id="btnSearch" class="btn btn-danger" type="button"
                                             id="button-addon1">Tìm kiếm</button>
                                         <input name="classNameSearch" id="classNameSearch" type="text"
                                             class="form-control" placeholder="Nhập thông tin tìm kiếm"
@@ -203,7 +190,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </form>
                     <!-- Bảng hiển thị thông tin -->
                     <table id="corseMng" class="table table-striped">

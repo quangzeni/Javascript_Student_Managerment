@@ -39,16 +39,16 @@ arrCourse.forEach(course => {
         })
     })
 })
-document.getElementById("totalCourse").innerText += totalCourse;
-document.getElementById("totalClass").innerText += totalClass;
-document.getElementById("activeClass").innerText += activeClass;
-document.getElementById("notActiveClass").innerText += notActiveClass;
-document.getElementById("pendingClass").innerText += pendingClass;
-document.getElementById("totalStudent").innerText += totalStudent;
-document.getElementById("pendingStudent").innerText += pendingStudent;
-document.getElementById("studingStudent").innerText += studingStudent;
-document.getElementById("bandedStudent").innerText += bandedStudent;
-document.getElementById("graduatedStudent").innerText += graduatedStudent;
+document.getElementById("totalCourse").innerText    = totalCourse;
+document.getElementById("totalClass").innerText = totalClass;
+document.getElementById("activeClass").innerText = activeClass;
+document.getElementById("notActiveClass").innerText = notActiveClass;
+document.getElementById("pendingClass").innerText = pendingClass;
+document.getElementById("totalStudent").innerText = totalStudent;
+document.getElementById("pendingStudent").innerText = pendingStudent;
+document.getElementById("studingStudent").innerText = studingStudent;
+document.getElementById("bandedStudent").innerText = bandedStudent;
+document.getElementById("graduatedStudent").innerText = graduatedStudent;
 // Đăng xuất
 var logOutButton = document.getElementById("logOutButton");
 var logOut = document.getElementById("logOut");

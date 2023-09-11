@@ -91,14 +91,13 @@
                     <h3>QUẢN LÝ SINH VIÊN</h3>
                     <!-- Phần thêm mới và tìm kiếm + sắp xếp -->
                     <form action="#" id="modalSearchSort">
-                        <div class="container">
                             <div class="row">
                                 <!-- Button modal -->
-                                <div class="col-2" id="addNew" >
+                                <div class="col-2" id="addNew">
                                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    Thêm mới
-                                </button>
+                                        data-bs-target="#exampleModal">
+                                        Thêm mới
+                                    </button>
                                 </div>
                                 <!-- Modal -->
                                 <div class="modal fade" id="exampleModal" tabindex="-1"
@@ -113,30 +112,57 @@
                                             </div>
                                             <div class="modal-body">
                                                 <form action="#">
-                                                    <label for="courseChoose">Lớp học</label>
-                                                    <select name="courseChoose" id="courseChoose">
-                                                        <option value="">Chọn lớp học</option>
-                                                        <option value="courseChoose">HN-JV230508</option>
-                                                    </select><br>
-                                                    <label for="studentId">Mã sinh viên (*)</label>
-                                                    <input type="text" name="studentId" id="studentId"
-                                                        placeholder="Nhập vào mã sinh viên"><br>
-                                                    <label for="studentName">Tên sinh viên (*)</label>
-                                                    <input type="text" name="studentName" id="studentName"
-                                                        placeholder="Nhập vào tên sinh viên"><br>
-                                                    <label for="birth">Năm sinh (*)</label>
-                                                    <input type="text" name="birth" id="birth"><br>
-                                                    <label for="address">Địa chỉ (*)</label>
-                                                    <input type="text" name="address" id="address"><br>
-                                                    <label for="email">Email (*)</label>
-                                                    <input type="text" name="email" id="email"><br>
-                                                    <label for="sex">Giới tính</label>
-                                                    <select name="sex" id="sex">
-                                                        <option value="">Lựa chọn</option>
-                                                        <option value="boy">Nam</option>
-                                                        <option value="girl">Nữ</option>
-                                                        <option value="unknow">Không rõ</option>
-                                                    </select>
+                                                    <div class="row mb-3">
+                                                        <label for="courseChoose" class="form-label col-sm-4">Lớp
+                                                            học</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control" name="courseChoose"
+                                                                id="courseChoose">
+                                                                <option value="">Chọn lớp học</option>
+                                                                <option value="courseChoose">HN-JV230508</option>
+                                                            </select><br>
+                                                        </div>
+                                                        <label for="studentId" class="form-label col-sm-4">Mã sinh viên
+                                                            (*)</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control" type="text" name="studentId"
+                                                                id="studentId" placeholder="Nhập vào mã sinh viên"><br>
+                                                        </div>
+                                                        <label for="studentName" class="form-label col-sm-4">Tên sinh
+                                                            viên (*)</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control" type="text" name="studentName"
+                                                                id="studentName"
+                                                                placeholder="Nhập vào tên sinh viên"><br>
+                                                        </div>
+                                                        <label for="birth" class="form-label col-sm-4">Năm sinh
+                                                            (*)</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control" type="text" name="birth"
+                                                                id="birth"><br>
+                                                        </div>
+                                                        <label for="address" class="form-label col-sm-4">Địa chỉ
+                                                            (*)</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control" type="text" name="address"
+                                                                id="address"><br>
+                                                        </div>
+                                                        <label for="email" class="form-label col-sm-4">Email (*)</label>
+                                                        <div class="col-sm-8">
+                                                            <input class="form-control" type="text" name="email"
+                                                                id="email"><br>
+                                                        </div>
+                                                        <label for="sex" class="form-label col-sm-4">Giới tính</label>
+                                                        <div class="col-sm-8">
+                                                            <select class="form-control" name="sex" id="sex">
+                                                                <option value="">Lựa chọn</option>
+                                                                <option value="boy">Nam</option>
+                                                                <option value="girl">Nữ</option>
+                                                                <option value="unknow">Không rõ</option>
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
 
                                                 </form>
                                             </div>
@@ -151,18 +177,20 @@
                                 </div>
                                 <div class="col-6">
                                     <!-- Tìm kiếm -->
-                                <div class="input-group mb-3">
-                                    <button id="btnSearch" class="btn btn-outline-secondary" type="button"
-                                        id="button-addon1">Tìm kiếm</button>
-                                    <input name="classNameSearch" id="classNameSearch" type="text" class="form-control"
-                                        placeholder="" aria-label="Example text with button addon"
-                                        aria-describedby="button-addon1">
-                                </div>
+                                    <div class="input-group mb-3">
+                                        <button id="btnSearch" class="btn btn-danger" type="button"
+                                            id="button-addon1">Tìm kiếm</button>
+                                        <input name="classNameSearch" id="classNameSearch" type="text"
+                                            class="form-control" placeholder="Nhập thông tin tìm kiếm"
+                                            aria-label="Example text with button addon"
+                                            aria-describedby="button-addon1">
+                                    </div>
                                 </div>
                                 <!-- Sắp xếp -->
                                 <div class="col-4">
                                     <div class="input-group mb-3">
-                                        <label for="sort" class="input-group-text" for="inputGroupSelect02">Sắp xếp</label>
+                                        <label for="sort" class="input-group-text" for="inputGroupSelect02">Sắp
+                                            xếp</label>
                                         <select name="sort" id="sort" onchange="sortClass()" class="form-select"
                                             id="inputGroupSelect02">
                                             <option value="" selected>Lựa chọn</option>
@@ -174,7 +202,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </form>
                     <!-- Bảng hiển thị thông tin -->
                     <table id="corseMng" class="table table-striped ">
