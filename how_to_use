@@ -2,3 +2,8 @@ Step one: at HTML file, click and run load_data.html file with "Open with live s
 Step two: at HTML file, click and run login_page.html file with "Open with live server" on Visual Code
 Step three: You can use function on page. 
   THANK YOU
+
+ステップ 1: HTML ファイルで、ビジュアル コード上で「ライブ サーバーで開く」を指定してload_data.html ファイルをクリックして実行し、データをローカル ストレージにロードします。
+ステップ 2: HTML ファイルで、Visual Code 上で「ライブサーバーで開く」を指定して、login_page.html ファイルをクリックして実行します。
+ステップ 3: ページ上の機能を使用できます。
+   ありがとうございます
