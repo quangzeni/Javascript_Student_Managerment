@@ -227,13 +227,25 @@ let deleteStudent = (studentId) => {
         let indexOfClass = arrClass.findIndex(cls => {
             return cls.arrStudent.findIndex(student => student.studentId === studentId) !== -1
         });
+        // let oldClassId = arrClass[indexOfClass].classId
+        // let indexOfOriginClass = arrCourse.findIndex(course =>{
+        //     return course.arrClass.findIndex(cls => cls == arrClass[indexOfClass] ) !== -1
+        // })
+        let indexOfOriginClass = 0;
+        arrCourse.forEach(course => {
+            indexOfOriginClass = course.arrClass.findIndex(cls => cls == arrClass[indexOfClass]) !== -1
+            return indexOfOriginClass;
+        });
+
         let indexOfCourse = arrCourse.findIndex(course => {
             return course.arrClass.findIndex(cls => {
                 return cls.arrStudent.findIndex(student => student.studentId === studentId) !== -1
             }) !== -1
         })
-        console.log("indexOfCourse", indexOfCourse);
-        arrCourse[indexOfCourse]?.arrClass[indexOfClass]?.arrStudent.splice(index, 1);
+        console.log("arrClass[indexOfClass", arrClass[indexOfClass]);
+        console.log("arrStudent", arrStudent);
+        console.log("indexOfOriginClass", indexOfOriginClass);
+        arrCourse[indexOfCourse]?.arrClass[indexOfOriginClass]?.arrStudent.splice(index, 1);
         arrClass[indexOfClass]?.arrStudent.splice(index, 1);
         arrStudent.splice(index, 1);
         localStorage.setItem("arrCourse", JSON.stringify(arrCourse));

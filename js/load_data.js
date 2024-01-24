@@ -225,7 +225,7 @@ let arrCourse = [
                 status: "Đang chờ",
                 arrStudent: [
                     {
-                        studentId: "SV012",
+                        studentId: "SV013",
                         studentName: "Nguyễn Văn G",
                         birth: 2000,
                         address: "Hà Nội",
@@ -252,7 +252,7 @@ let arrCourse = [
                 status: "Đang chờ",
                 arrStudent: [
                     {
-                        studentId: "SV013",
+                        studentId: "SV014",
                         studentName: "Nguyễn Văn G",
                         birth: 2000,
                         address: "Hà Nội",
@@ -279,7 +279,7 @@ let arrCourse = [
                 status: "Đang chờ",
                 arrStudent: [
                     {
-                        studentId: "SV014",
+                        studentId: "SV015",
                         studentName: "Nguyễn Văn G",
                         birth: 2000,
                         address: "Hà Nội",
@@ -306,7 +306,7 @@ let arrCourse = [
                 status: "Đang chờ",
                 arrStudent: [
                     {
-                        studentId: "SV015",
+                        studentId: "SV016",
                         studentName: "Nguyễn Văn G",
                         birth: 2000,
                         address: "Hà Nội",
@@ -333,7 +333,7 @@ let arrCourse = [
                 status: "Đang chờ",
                 arrStudent: [
                     {
-                        studentId: "SV016",
+                        studentId: "SV017",
                         studentName: "Nguyễn Văn G",
                         birth: 2000,
                         address: "Hà Nội",
@@ -360,7 +360,7 @@ let arrCourse = [
                 status: "Đang chờ",
                 arrStudent: [
                     {
-                        studentId: "SV017",
+                        studentId: "SV018",
                         studentName: "Nguyễn Văn G",
                         birth: 2000,
                         address: "Hà Nội",
@@ -387,7 +387,7 @@ let arrCourse = [
                 status: "Đang chờ",
                 arrStudent: [
                     {
-                        studentId: "SV018",
+                        studentId: "SV019",
                         studentName: "Nguyễn Văn G",
                         birth: 2000,
                         address: "Hà Nội",
